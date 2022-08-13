@@ -1,0 +1,47 @@
+import logging
+
+logging.basicConfig(filename = 'test.log' , level=logging.INFO,format='%(asctime)s , %(levelname)s,%(message)s')
+
+class Stringtasks:
+    '''this will perform all the given operations in the assignment'''
+
+    def extractdata( s):
+        try:
+            logging.info('extracting the values from the string from index one to 330 with 3 jump size')
+            s1 = s[1:300:3]
+            logging.info('operation has been performed as defiened')
+            return s1
+        except Exception as e:
+            return logging.exception('the exception we have now is', str(e))
+    def reverseString(s):
+        try:
+            logging.info('this function will reverse your string')
+            s2=s[::-1]
+            logging.info('out we hava now is',s2)
+            return s2
+        except Exception as e:
+            logging.exception('the exception we have now is',str(e))
+
+    def replace(s, oldstr, newstr):
+        try:
+            logging.info('this function will replace your sting with some other string')
+            s1 = s.replace(oldstr, newstr)
+            return s1
+            logging.info('output we got after replacing the string')
+        except Exception as e:
+            logging.exception('exception we have is'.str(e))
+
+    def uppersplit(s):
+        'this will convert into uppercase and split the string'
+        try:
+            logging.info('this will convert into uppercase and split the string')
+            s1 = s.upper().split()
+            return s1
+            logging.info('the output we have', s1)
+
+        except Exception as e:
+            logging.exception('the exception we got is', str(e))
+
+
+
+
